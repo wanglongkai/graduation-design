@@ -3,7 +3,7 @@
  */
 
  function showScrollBar(){
-     document.body.style.overflow = auto;
+     document.body.style.overflow = 'auto';
  }
 
  function hideScrollBar(){
