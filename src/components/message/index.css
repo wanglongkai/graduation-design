@@ -1,0 +1,57 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-09
+ */
+
+
+.wlk-message{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.wlk-main{
+    background-color: white;
+    border-radius: 5px;
+    height: 35px;
+    line-height: 35px;
+    padding:0 8px;
+    box-shadow: 0 0 10px #999;
+    margin-top: 5px;
+}
+
+
+.ico-success::before{
+    content: "👍"
+}
+.ico-info::before{
+    content: "ℹ"
+}
+.ico-warning::before{
+    content: "⚠"
+}
+.ico-danger::before{
+    content: "☠"
+}
+
+
+
+
+.type-success{
+    color:#52c41a;
+    border:1px solid #52c41a;
+}
+.type-info{
+    color:#1890ff;
+    border:1px solid #1890ff;
+}
+.type-warning{
+    color:#faad14;
+    border:1px solid #faad14;
+}
+.type-danger{
+    color:#f5222d;
+    border:1px solid #f5222d;
+}

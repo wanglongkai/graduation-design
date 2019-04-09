@@ -3,13 +3,20 @@ import './App.css';
 import Ico from './components/ico';
 import Btn from './components/button'
 import Rate from './components/rate'
+import Page from './components/pagination'
+import message from './components/message'
 
 class App extends Component {
+
+  say = ()=>{
+    console.log('点击')
+    message.danger("成功信息！",5)
+  }
 
   render() {
     return (
       <div className="App">
-        <Rate value={4} length={7} theme='#999999' size={50} onRate={(v)=>console.log(v,"最终评分")}/>
+        <div onClick={this.say}>222</div>
       </div>
     );
   }

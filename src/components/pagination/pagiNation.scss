@@ -1,0 +1,65 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-08
+ */
+
+.wlk-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#909597;
+    a,.input{
+        display: inline-block;
+        margin: 0 3px;
+    }
+    a{
+        cursor: pointer;
+    }
+    span{
+        margin: 0 5px;
+    }
+    input{
+        display: inline-block;
+        border:1px solid #cccccc;
+        border-radius: 3px;
+        padding: 0;
+    }
+    ul{
+        box-sizing: border-box;
+        display: inline-block;
+        list-style: none;
+        margin:0;
+        padding:0;
+        li{
+            display: inline-block;
+            border:1px solid #cccccc;
+            margin: 0 3px;
+            border-radius: 3px;
+            cursor: pointer;
+        };
+    }
+}
+$lg:40px;
+.size-lg{
+    width: $lg;
+    height: $lg;
+    line-height: $lg;
+}
+
+$md:30px;
+.size-md{
+    width: $md;
+    height: $md;
+    line-height: $md;
+}
+
+$sm:20px;
+.size-sm{
+    width: $sm;
+    height: $sm;
+    line-height:$sm;
+}
+
+.hidden{
+    display: none !important;
+}
