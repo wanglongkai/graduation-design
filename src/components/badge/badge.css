@@ -1,0 +1,16 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-09
+ */
+.wlk-badge{
+    display: inline-block;
+    position: relative;
+}
+
+.wlk-num{
+    font-size: 12px;
+    position: absolute;
+    border-radius: 20%;
+    color:white;
+    padding: 2px 4px;
+}

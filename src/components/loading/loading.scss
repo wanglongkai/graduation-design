@@ -1,0 +1,42 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-09
+ */
+
+@mixin local{
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wlk-main-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include local;
+}
+
+.wlk-loading {
+    animation: load 2s linear infinite;
+}
+
+.wlk-fixed{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    @include local;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
