@@ -11,10 +11,9 @@ export default class TabPane extends React.Component {
     this.state = {}
   }
   static defaultProps = {
-    tab:'',
-    key:'',
+    tab:'新建选项卡',
+    children:'该tab页无内容！'
   }
-
 
   render() {
     return (

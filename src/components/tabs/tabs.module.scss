@@ -2,6 +2,28 @@
  *@author:WangLK5
  *@Date:2019-04-09
  */
-.col{
-    color:red;
+.tabTitle{
+    list-style: none;
+    margin:0;
+    padding:0;
+    li{
+        display: inline-block;
+        border: 1px solid #cccccc;
+        border-top-left-radius:5px;
+        border-top-right-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-bottom: -1px !important;
+        border-bottom: 2px solid white;
+        color:rgba(0,0,0,0.65);
+    }
+}
+
+.content{
+    padding: 5px;
+}
+
+.active{
+    border-bottom: 2px solid white !important;
+
 }

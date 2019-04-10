@@ -1,0 +1,30 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-10
+ */
+table{
+    border-collapse:collapse;
+    border: 1px solid #e8e8e8;
+}
+.caption{
+    border: 1px solid #e8e8e8;
+    border-bottom: none ;
+    padding: 8px;
+}
+
+
+tr{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+tbody tr:hover{
+    background-color: #F5FFF2;
+}
+
+td{
+    padding: 8px;
+}
+th{
+    padding: 8px;
+    background-color: rgba(233,233,233,0.5);
+}
