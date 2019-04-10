@@ -1,0 +1,22 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-10
+ */
+.imgCss{
+    border-radius: 20px;
+    max-width: 1000px;
+    max-height: 700px;
+    box-shadow: 0 0 12px #333333;
+}
+
+.divCss{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(171, 177, 186,0.6);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
