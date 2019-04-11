@@ -1,0 +1,9 @@
+<Carousel radius='30px' time={3} >
+  <ul>
+    <li><a href="#"><img src={pic1} alt=""/></a></li>
+    <li><a href="#"><img src={pic2} alt=""/></a></li>
+    <li><a href="#"><img src={pic3} alt=""/></a></li>
+    <li><a href="#"><img src={pic4} alt=""/></a></li>
+    <li><a href="#"><img src={pic5} alt=""/></a></li>
+  </ul>
+</Carousel>

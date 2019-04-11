@@ -1,0 +1,66 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-11
+ */
+.wlk-modal-main{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(89, 89, 89,0.7);
+    .mainBox{
+        position: absolute;
+        left:50%;
+        top:25%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        border-radius: 8px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        span{
+            position: absolute;
+            right: 10px;
+            top:0;
+            font-size: 20px;
+            cursor: pointer;
+            &:hover{
+                color:rgba(89, 89, 89,0.7);
+            }
+        }
+        .title{
+            text-align: left;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        .content{
+            padding: 10px;
+            min-width: 300px;
+        }
+    }
+}
+
+.buttonDiv{
+    border-top: 1px solid #cccccc;
+    padding-top: 5px;
+    button{
+        margin:0 6px;
+        padding: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .no{
+        background-color: white;
+        &:hover{
+            background-color: #e8e8e8;
+        }
+    }
+    .yes{
+        color:white;
+        &:hover{
+            color:#adadad;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.panel {
+  .head {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    z-index: 1;
+    .left {
+      float: left;
+      background-color: #fff;
+      >*{
+        float: left;
+      }
+      .title {
+        min-width: 130px;
+        height: 30px;
+        padding: 0 20px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 4px;
+      }
+    }
+    .right {
+      float: right;
+      background-color: #fff;
+    }
+  }
+  .body {
+    margin-top: -5px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+
+}
