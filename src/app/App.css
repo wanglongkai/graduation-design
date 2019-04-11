@@ -1,0 +1,21 @@
+@import '../../node_modules/antd/dist/antd.css';
+.App {
+  text-align: center;
+  display: flex;
+}
+
+.nav{
+  width:256px;
+  min-height: 100vh;
+  border-right: 1px solid #e8e8e8;
+}
+.main{
+  flex: 1;
+}
+.top{
+  box-shadow: 0 0 5px #cccccc;
+}
+.pages{
+  text-align: left;
+  padding: 10px;
+}
