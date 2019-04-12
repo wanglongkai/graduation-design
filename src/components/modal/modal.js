@@ -9,9 +9,9 @@ import style from './modal.module.scss';
 export default class Modal extends React.Component {
 
   static defaultProps = {
-    theme:'blue',//主题颜色
+    theme:'#2691E7',//主题颜色
     visible : true,//是否显示modal
-    title:'modal标题',
+    title:'modal-title',
     onOk:null,//确定按钮回调
     onCancel:null,//取消回调
     okText:'Yes',//确定按钮文案
@@ -36,7 +36,7 @@ export default class Modal extends React.Component {
             </button>
             <button className={style.no} style={{border:`1px solid ${theme}`}} onClick={onCancel}>
               {cancelText}
-              </button>
+            </button>
           </div>
           <span onClick={onCancel}>×</span>
         </div>

@@ -12,7 +12,7 @@
     .mainBox{
         position: absolute;
         left:50%;
-        top:25%;
+        top:40%;
         transform: translate(-50%,-50%);
         background-color: white;
         border-radius: 8px;
@@ -45,9 +45,10 @@
 .buttonDiv{
     border-top: 1px solid #cccccc;
     padding-top: 5px;
+    text-align: center;
     button{
         margin:0 6px;
-        padding: 5px;
+        padding: 5px 8px;
         border-radius: 4px;
         cursor: pointer;
     }

@@ -5,11 +5,28 @@
 
 import React from 'react';
 import style from "../index.module.scss"
+import Modal from '../../../components/modal'
+import Btn from '../../../components/button'
 
 export default class ModalPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      visible:false
+    }
+  }
+
+  stylesheet = {
+    marginBottom:20,
+    marginTop:20,
+    paddingLeft: 40,
+  }
+
+  showModal = ()=>{
+    this.setState({visible:true})
+  }
+  hiddenModal =()=>{
+    this.setState({visible:false})
   }
 
 
@@ -23,9 +40,14 @@ export default class ModalPage extends React.Component {
         </div>
 
         <div style={{clear:'both' ,borderTop:'1px solid #e8e8e8'}}/>
-        <h3 style={{fontSize:18,paddingLeft:20,fontWeight:'lighter'}}>效果展示</h3>
 
-        {/*主题展示区域*/}
+        <div style={this.stylesheet}>
+          <Btn onClick={this.showModal}>显示模态框</Btn>
+        </div>
+
+        <Modal visible={this.state.visible} onCancel={this.hiddenModal}>
+          <div style={{height:200,width:400}}>this is my modal</div>
+        </Modal>
 
         <div style={{clear:'both' ,borderTop:'1px solid #e8e8e8'}}/>
         <h3 style={{fontSize:18,paddingLeft:20,fontWeight:'lighter'}}>API</h3>
@@ -41,6 +63,48 @@ export default class ModalPage extends React.Component {
             <div>徽标的数字</div>
             <div>number</div>
             <div>0</div>
+          </li>
+          <li className={style.li}>
+            <div>title</div>
+            <div>modal标题</div>
+            <div>string</div>
+            <div>'modal-title'</div>
+          </li>
+          <li className={style.li}>
+            <div>theme</div>
+            <div>主题颜色</div>
+            <div>色值</div>
+            <div>'blue'</div>
+          </li>
+          <li className={style.li}>
+            <div>visible</div>
+            <div>是否显示modal</div>
+            <div>boolean</div>
+            <div>true</div>
+          </li>
+          <li className={style.li}>
+            <div>okText</div>
+            <div>确认按钮文案</div>
+            <div>string</div>
+            <div>'Yes'</div>
+          </li>
+          <li className={style.li}>
+            <div>cancelText</div>
+            <div>取消按钮文案</div>
+            <div>string</div>
+            <div>'No'</div>
+          </li>
+          <li className={style.li}>
+            <div>onOk</div>
+            <div>确定按钮回调</div>
+            <div>function:</div>
+            <div>{`()=>{}`}</div>
+          </li>
+          <li className={style.li}>
+            <div>onCancel</div>
+            <div>取消按钮回调</div>
+            <div>function</div>
+            <div>{`()=>{}`}</div>
           </li>
         </ul>
       </div>

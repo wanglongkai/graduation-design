@@ -4,8 +4,7 @@
  */
 
 import React from 'react';
-import Ico from '../ico'
-import './pagiNation.scss'
+import css from './pagiNation.module.scss'
 
 const themeObj = {
   black: "#00",
@@ -45,7 +44,7 @@ export default class PagiNation extends React.Component {
     showJump:true,
     size:'md',//组件尺寸
     theme:themeObj['yellow'],
-    onChange:null,//选择页码后的回调函数
+    onChange:()=>{},//选择页码后的回调函数
   }
 
   componentDidMount(){
@@ -174,7 +173,7 @@ export default class PagiNation extends React.Component {
     const hidden = showJump ? '' : 'hidden'
 
     return (
-      <div className='wlk-main' style={style}>
+      <div className={css['wlk-main']} style={style}>
         <a onClick={this.prevPage} ref={this.goPrev}>上一页</a>
         <ul>
           {
@@ -183,28 +182,29 @@ export default class PagiNation extends React.Component {
               index = +new Date() + index;
               if(elem.indexOf('active') !== -1){
                 let num = elem.replace(':active','');
-                return <li key={index} className={`size-${size}`} onClick={()=>this.toPage(num)} style={this.active}>{num}</li>
+                return <li key={index} className={css[`size-${size}`]} onClick={()=>this.toPage(num)} style={this.active}>{num}</li>
               }else if(elem.indexOf('prev') !== -1){
-                return <li key={index} className={`size-${size}`} onClick={this.prevSize}><Ico type='qita'/></li>
+                return <li key={index} className={css[`size-${size}`]} onClick={this.prevSize}>...</li>
               }else if(elem.indexOf('next') !== -1){
-                return <li key={index} className={`size-${size}`} onClick={this.nextSize}><Ico type='qita'/></li>
+                return <li key={index} className={css[`size-${size}`]} onClick={this.nextSize}>...</li>
               }else{
-                return <li key={index} className={`size-${size}`} onClick={()=>this.toPage(elem)}>{elem}</li>
+                return <li key={index} className={css[`size-${size}`]} onClick={()=>this.toPage(elem)}>{elem}</li>
               }
             })
           }
         </ul>
         <a onClick={this.nextPage} ref={this.goNext}>下一页</a>
-        <span className={hidden}>跳至</span>
-        <input type="text" className={`size-${size} ${hidden}`} ref={this.inputRef}
+        <span className={css[hidden]}>跳至</span>
+        <input type="text" className={css[`size-${size}`]} ref={this.inputRef}
                onBlur={()=>{this.inputRef.current.value='';}}
+               style={{display:showJump?'':'none'}}
                onKeyPress={(e)=>{
                  let ev = window.event || e;
                  if(ev.keyCode === 13){
                    this.toPage(parseInt(this.inputRef.current.value))
                  }
                }}/>
-        <span className={hidden}>页</span>
+        <span className={css[hidden]}>页</span>
       </div>
     )
   }
