@@ -5,7 +5,7 @@
 分别是：	<br/>
 1.Button按钮  √<br/>
 2.Icon图标  √<br/>
-3.Collapse 折叠面板 √<br/>
+3.panel 折叠面板 √<br/>
 4.Pagination(分页) √<br/>
 5.Rate(评分)  √<br/>
 6.Table(表格)  √<br/>

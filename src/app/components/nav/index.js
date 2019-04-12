@@ -4,59 +4,41 @@
  */
 
 import React from 'react';
-import Logo from  '../../asset/1.jpg'
-import { Menu, Icon, Button } from 'antd';
+import { Link } from "react-router-dom"
+import Logo from  '../../asset/2.PNG'
+import { Menu, Icon} from 'antd';
+import menuConfig from './menuConfig'
 
 const SubMenu = Menu.SubMenu;
 
 export default class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
+
+  //渲染Menu
+  renderMenuTree = (data)=>{
+    return data.map((item)=>{
+      if(item.children){
+        return (
+          <SubMenu title={<span><Icon type={item.icon} /><span>{item.title}</span></span>} key={item.key}>
+            {this.renderMenuTree(item.children)}
+          </SubMenu>
+        )
+      }else{
+        return <Menu.Item key={item.key}>
+          <Link to={item.key}>{ item.icon ? <Icon type={item.icon} /> : null}{item.title}</Link>
+        </Menu.Item>
+      }
+    })
   }
 
   render() {
-
-
-
     return (
       <div>
         <div>
           <img src={Logo} alt="LOGO" style={{width:'100%',height:'100px'}}/>
         </div>
-        <Menu
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          mode="inline"
-          inlineCollapsed={this.state.collapsed}
-        >
-          <Menu.Item key="1">
-            <Icon type="pie-chart" />
-            <span>Option 1</span>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Icon type="desktop" />
-            <span>Option 2</span>
-          </Menu.Item>
-          <Menu.Item key="3">
-            <Icon type="inbox" />
-            <span>Option 3</span>
-          </Menu.Item>
-          <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-            <Menu.Item key="5">Option 5</Menu.Item>
-            <Menu.Item key="6">Option 6</Menu.Item>
-            <Menu.Item key="7">Option 7</Menu.Item>
-            <Menu.Item key="8">Option 8</Menu.Item>
-          </SubMenu>
-          <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-            <Menu.Item key="9">Option 9</Menu.Item>
-            <Menu.Item key="10">Option 10</Menu.Item>
-            <SubMenu key="sub3" title="Submenu">
-              <Menu.Item key="11">Option 11</Menu.Item>
-              <Menu.Item key="12">Option 12</Menu.Item>
-            </SubMenu>
-          </SubMenu>
-        </Menu>
+          <Menu theme='light' mode="inline">
+            {this.renderMenuTree(menuConfig)}
+          </Menu>
       </div>
     )
   }

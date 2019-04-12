@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import './badge.css'
+import style from  './badge.module.scss'
 
 export default class Badge extends React.Component {
   constructor(props) {
@@ -28,9 +28,9 @@ export default class Badge extends React.Component {
   render() {
     const {count,over} = this.props;
     return (
-      <div className='wlk-badge'>
+      <div className={style['wlk-badge']}>
         {this.props.children}
-        <span className='wlk-num' style={this.local}>{count>over ? `${over}+` : count}</span>
+        <span className={style['wlk-num']} style={this.local}>{count>over ? `${over}+` : count}</span>
       </div>
     )
   }

@@ -31,9 +31,10 @@ export default function (time,theme) {
       //先清除所有按钮的样式
 
       for (var j=0;j<olObj.children.length;j++){
-        olObj.children[j].removeAttribute("class");
+        olObj.children[j].style.backgroundColor='';
       }
-      this.className="current";
+      // this.className="current";
+      this.style.backgroundColor=theme;
       pic=this.getAttribute("index");
       animate(ulObj,-pic*imgWidth);
     }
@@ -72,15 +73,15 @@ export default function (time,theme) {
     //如果pic==5说明,此时显示第6个图(内容是第一张图片),第一个小按钮有颜色,
     if (pic == list.length - 1) {
       //第五个按钮颜色干掉
-      olObj.children[olObj.children.length - 1].className = "";
+      olObj.children[olObj.children.length - 1].style.backgroundColor = "";
       //第一个按钮颜色设置上
-      olObj.children[0].className = "current";
+      olObj.children[0].style.backgroundColor = theme;
     } else {
       //干掉所有的小按钮的背景颜色
       for (var i = 0; i < olObj.children.length; i++) {
-        olObj.children[i].removeAttribute("class");
+        olObj.children[i].style.backgroundColor = '';
       }
-      olObj.children[pic].className = "current";
+      olObj.children[pic].style.backgroundColor = theme;
     }
   }
   left.onclick=function () {
@@ -91,10 +92,10 @@ export default function (time,theme) {
     pic--;
     animate(ulObj,-pic*imgWidth);
     for (var i = 0; i < olObj.children.length; i++) {
-      olObj.children[i].removeAttribute("class");
+      olObj.children[i].style.backgroundColor = '';
     }
     //当前的pic索引对应的按钮设置颜色
-    olObj.children[pic].className = "current";
+    olObj.children[pic].style.backgroundColor = theme;
   };
 
   //设置任意的一个元素,移动到指定的目标位置

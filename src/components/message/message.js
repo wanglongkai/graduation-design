@@ -2,7 +2,7 @@
  * @author:WangLK5
  * @Date:2019-04-09
  */
-import './index.css'
+import style from './index.module.scss'
 
 function message(info, time, type) {
   const app = document.body;
@@ -15,10 +15,10 @@ function message(info, time, type) {
   mesText.appendChild(text);
   mesCont.appendChild(mesIco);
   mesCont.appendChild(mesText)
-  mesBox.classList.add("wlk-message");
-  mesCont.classList.add('wlk-main');
-  mesCont.classList.add(`type-${type}`);
-  mesIco.classList.add(`ico-${type}`)
+  mesBox.classList.add(style["wlk-message"]);
+  mesCont.classList.add(style['wlk-main']);
+  mesCont.classList.add(style[`type-${type}`]);
+  mesIco.classList.add(style[`ico-${type}`])
   mesBox.appendChild(mesCont)
   app.appendChild(mesBox)
 

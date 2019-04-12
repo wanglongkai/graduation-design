@@ -5,7 +5,7 @@
 
 import React from 'react';
 import Ico from '../ico'
-import './loading.scss'
+import style from './loading.module.scss'
 
 export default class Loading extends React.Component {
 
@@ -26,16 +26,16 @@ export default class Loading extends React.Component {
     return (
       this.props.global
         ?
-      <div className='wlk-fixed' style={{display:spinning ? null:'none',color:theme}}>
-        <div className='wlk-loading'>{icon}</div>
+      <div className={style['wlk-fixed']} style={{display:spinning ? null:'none',color:theme}}>
+        <div className={style['wlk-loading']}>{icon}</div>
         <p style={{fontSize:size}}>{tip}</p>
       </div>
         :
-      <div style={{position:'relative'}}>
+      <div style={{position:'relative',display:'inline-block'}}>
         {children}
-        <div className='wlk-main-loading' style={{display:spinning ? null:'none',color:theme}}>
-          <div className='wlk-loading'>{icon}</div>
-          <p style={{display:tipShow ? null : 'none',fontSize:tipShow}}>{tip}</p>
+        <div className={style['wlk-main-loading']} style={{display:spinning ? null:'none',color:theme}}>
+          <div className={style['wlk-loading']}>{icon}</div>
+          <p style={{display:tipShow ? null : 'none',fontSize:size}}>{tip}</p>
         </div>
       </div>
     )

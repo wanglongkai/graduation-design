@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-export default class PageIndex extends React.Component {
+export default class RootPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
@@ -15,7 +15,7 @@ export default class PageIndex extends React.Component {
   render() {
     return (
       <div>
-          主题
+        首页
       </div>
     )
   }

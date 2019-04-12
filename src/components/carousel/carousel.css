@@ -9,7 +9,6 @@
 .box {
     width: 500px;
     height: 300px;
-    margin: 100px auto;
     padding: 5px;
 }
 .inner{
@@ -23,7 +22,7 @@
     height: 300px;
     vertical-align: top
 }
-ul {
+.wlk-carsouel{
     width: 1000%;
     position: absolute;
     list-style: none;
@@ -34,6 +33,7 @@ ul {
     float: left;
 
 }
+
 
 ol {
     position: absolute;

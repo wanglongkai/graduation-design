@@ -1,0 +1,107 @@
+/**
+ *@author:WangLK5
+ *@Date:2019-04-12
+ */
+.teach{
+    padding: 0 20px;
+    margin-bottom: 20px;
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size:14px;
+        padding-left:20px
+    }
+}
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.item{
+    padding:0;
+    width:100px;
+    height: 105px;
+    text-align: center;
+    float: left;
+    margin: 10px 20px;
+}
+.typeName{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    font-size: 40px !important;
+    &:hover{
+        font-size: 50px !important;
+    }
+}
+
+
+
+.API{
+    .title{
+        background-color: #FAFAFA;
+        height: 50px;
+        border-bottom: 2px solid #e8e8e8;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 14px;
+        font-weight: lighter;
+        .param{
+            width:200px;
+            padding: 14px 16px;
+        }
+        .desc{
+            flex: 1;
+            padding: 14px 16px;
+        }
+        .type{
+            width: 250px;
+            padding: 14px 16px;
+        }
+        .plain{
+            width: 150px;
+            padding: 14px 16px;
+        }
+    }
+    .li{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-bottom: 1px solid #e8e8e8;
+        height: 40px;
+        font-size: 14px;
+        &:hover{
+            background-color: #EFEFEF;
+        }
+        div:nth-child(1){
+            width:200px;
+            color:#003A8C;
+            padding: 14px 16px;
+        }
+        div:nth-child(2){
+            flex: 1;
+            color:#314659;
+            font-weight: lighter;
+            padding: 14px 16px;
+        }
+        div:nth-child(3){
+            width: 250px;
+            color: #c41d7f;
+            padding: 14px 16px;
+        }
+        div:nth-child(4){
+            width: 150px;
+            padding: 14px 16px;
+        }
+    }
+    div{
+        display: inline-block;
+    }
+}
