@@ -54,7 +54,7 @@ export default class SpinPage extends React.Component {
 
         <div style={this.stylesheet}>
           <Btn onClick={this.goSpin}>全局加载</Btn>
-          <Spin global spinning={this.state.spinning}/>
+          <Spin global spinning={this.state.spinning} size='25px' theme='#2691E7'/>
           <br/><br/><br/>
 
           <Spin>

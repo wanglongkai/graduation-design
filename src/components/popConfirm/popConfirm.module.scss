@@ -8,12 +8,14 @@
     border-radius: 5px;
     padding:8px;
     box-shadow: 0 0 10px #adadad;
+    background-color:white;
 }
 .title{
     box-sizing: border-box;
     margin:4px 5px 7px 4px;
     font-weight: lighter;
     white-space: nowrap;
+    font-size: 15px;
 }
 .button{
     display: flex;
@@ -23,7 +25,7 @@
         margin: 0 5px;
         border:1px solid white;
         border-radius: 3px;
-        font-size: 12px;
+        font-size: 14px;
         width:40px;
         cursor: pointer;
     }

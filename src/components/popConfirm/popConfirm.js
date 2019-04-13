@@ -36,18 +36,19 @@ export default class PopConfirm extends React.Component {
   }
 
   static defaultProps = {
-    theme:'blue',
-    placement:'right',
+    theme:'#2691E7',
+    placement:'top',
     title:"are you sure do this action ?",
     okText:'Yes',
     cancelText:'No',
     onConfirm:()=>console.log('确定'),
+    onCancel:()=>{},
     children:''
   }
 
 
   render() {
-    const {placement,title,okText,cancelText,onConfirm,children,theme} = this.props;
+    const {placement,title,okText,cancelText,onConfirm,onCancel,children,theme} = this.props;
     return (
       <span style={{position:'relative'}} onClick={()=>{this.setState({show:true})}}>
         {children}
@@ -67,7 +68,8 @@ export default class PopConfirm extends React.Component {
               <button className={style.buttonCal}
                       onClick={(e)=>{
                         e.stopPropagation();
-                        this.setState({show:false})
+                        this.setState({show:false});
+                        onCancel()
                       }}
               >
                 {cancelText}

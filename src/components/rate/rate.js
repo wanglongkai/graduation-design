@@ -44,14 +44,15 @@ export default class Rate extends React.Component {
 
   //可选的所有props
   static defaultProps = {
-    children:'评分组件：',
+    children:'评分组件:',
     value:0,
     length:5,
     theme:themeObj['yellow'],
     onRate:()=>{},
     readOnly:false,
     shape:"★",
-    hollowShape:"☆"
+    hollowShape:"☆",
+    size:25
   }
 
   //hover事件，选择分数
@@ -88,9 +89,9 @@ export default class Rate extends React.Component {
   //传入value值时，初始化渲染
   componentDidMount(){
     let allLength = this.divRef.current.getBoundingClientRect().width;
-    let width = allLength*(this.props.value.toFixed(2)/this.props.length)
+    let width = allLength*(Number(this.props.value).toFixed(2)/this.props.length)
     this.setState({
-      score:this.props.value.toFixed(2),
+      score:Number(this.props.value).toFixed(2),
       mouseStyle:{ width: width},
     })
   }

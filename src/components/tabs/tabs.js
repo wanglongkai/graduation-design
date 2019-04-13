@@ -20,7 +20,7 @@ export default class Tabs extends React.Component {
     }
     this.defaultStyle = {
       fontSize:`${props.size}`,
-      margin:`0 ${this.props.gutter}px`
+      marginRight:`${this.props.gutter}px`
     }
   }
   componentDidMount(){
@@ -30,7 +30,7 @@ export default class Tabs extends React.Component {
   static defaultProps = {
     defaultActiveKey:1,//激活的tab
     size:'16px',//title尺寸
-    gutter:5,//选项卡之间的间隔
+    gutter:15,//选项卡之间的间隔
     theme:'red',//默认主题
     onChange:null,//切换时的回调函数
   }
@@ -60,7 +60,7 @@ export default class Tabs extends React.Component {
               return <li key={item.key}
                      onClick={()=>{
                        this.changeTab(item.key);
-                       this.props.onChange({key:item.key,tab:item.props.tab});
+                       this.props.onChange && this.props.onChange({key:item.key,tab:item.props.tab});
                      }}
                      className={parseInt(item.key,10) === this.state.nowKey ? style.active : ''}
                      style={
@@ -71,7 +71,7 @@ export default class Tabs extends React.Component {
             })
           }
         </ul>
-        <div className={style.content}>
+        <div className={style.content} style={{border:`1px solid ${this.props.theme}`}}>
           {this.state.nowTab}
         </div>
       </div>

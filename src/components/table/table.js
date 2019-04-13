@@ -18,7 +18,7 @@ export default class Table extends React.Component {
     columns:'',//表头
     data:'',//数据
     title:'标题位置',
-    showCap:true,//展示标题
+    showCap:false,//展示标题
     borderStyle:'line'//边框类型
   }
 
@@ -26,7 +26,6 @@ export default class Table extends React.Component {
   objectToTb = (item,index)=>{
     let list = []
     for(let it in item){
-      console.log(item[it],item)
       if(item.hasOwnProperty(it)){
         list.push(<td style={this.props.borderStyle==='cell' ? this.cellBorder :null}
                       key={`${index}-${item[it]}`}>{item[it]}</td>)

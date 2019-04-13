@@ -16,7 +16,7 @@ export default Rate;
 * size:组件尺寸
 * length:满分（整数）,
 * shape:默认"★",评分图案
-* hollowShape:默认"☆"，为评分时图案
+* hollowShape:默认"☆"，未评分时图案
 *
 * onRate:评分的执行方法，参数是对应的分数
 * */

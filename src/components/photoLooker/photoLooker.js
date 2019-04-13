@@ -35,7 +35,12 @@ export default class Photo extends React.Component {
   //点击查看
   toAllClick = (e)=>{
     e.stopPropagation();
-    this.create()
+    if(this.props.children&&this.props.children.props&&this.props.children.props.src){
+      this.create();
+    }else{
+      return false;
+    }
+
   }
 
   render() {

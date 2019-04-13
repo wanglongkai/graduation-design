@@ -18,6 +18,7 @@ export default class BackTop extends React.Component {
     top: 0,//回到顶部的距离
     theme:'#cccccc',
     visibilityHeight:200,//多高显示
+    children:'回到顶部'
   }
 
   componentDidMount(){

@@ -5,11 +5,14 @@
 
 import React from 'react';
 import style from "../index.module.scss"
+import pic from '../../asset/2.PNG'
+import PhotoLooker from '../../../components/photoLooker'
 
 export default class PhotoLokerPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
+   stylesheet = {
+    marginBottom:40,
+    marginTop:20,
+    paddingLeft: 40,
   }
 
 
@@ -23,7 +26,12 @@ export default class PhotoLokerPage extends React.Component {
         </div>
 
         <div style={{clear:'both' ,borderTop:'1px solid #e8e8e8'}}/>
-        <h3 style={{fontSize:18,paddingLeft:20,fontWeight:'lighter'}}>效果展示</h3>
+
+        <div style={this.stylesheet}>
+          <PhotoLooker>
+            <img src={pic} alt='图片损坏' title='可点击查看' style={{width:100, cursor: 'pointer'}}/>
+          </PhotoLooker>
+        </div>
 
         {/*主题展示区域*/}
 
@@ -37,10 +45,16 @@ export default class PhotoLokerPage extends React.Component {
             <div className={style.plain}>默认</div>
           </li>
           <li className={style.li}>
-            <div>count</div>
-            <div>徽标的数字</div>
-            <div>number</div>
-            <div>0</div>
+            <div>-</div>
+            <div><span style={{color:'red',fontSize:16,margin:0}}>使用说明:</span>用组件包裹需要查看的图片即可</div>
+            <div>-</div>
+            <div>-</div>
+          </li>
+          <li className={style.li}>
+            <div>children</div>
+            <div>需要被查看的图片</div>
+            <div>ReactNode</div>
+            <div>-</div>
           </li>
         </ul>
       </div>
