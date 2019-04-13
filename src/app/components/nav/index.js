@@ -7,6 +7,7 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import Logo from  '../../asset/2.PNG'
 import { Menu, Icon} from 'antd';
+import style from './nav.module.scss'
 import menuConfig from './menuConfig'
 
 const SubMenu = Menu.SubMenu;
@@ -33,8 +34,9 @@ export default class Nav extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <img src={Logo} alt="LOGO" style={{width:'100%',height:'100px'}}/>
+        <div className={style.logo}>
+          <img src={Logo} alt="LOGO" style={{width:'100%'}}/>
+          <span><i>W</i>ang<em>L</em>ong<em>K</em>ai</span>
         </div>
           <Menu theme='light' mode="inline">
             {this.renderMenuTree(menuConfig)}

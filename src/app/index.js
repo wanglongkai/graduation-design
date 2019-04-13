@@ -59,6 +59,7 @@ export default class WlkGraduationAPP extends React.Component {
                 </Switch>
             </div>
           </div>
+          <div className='bottomLine'> </div>
         </div>
       </BrowserRouter>
     )

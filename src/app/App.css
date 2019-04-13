@@ -13,9 +13,17 @@
   flex: 1;
 }
 .top{
-  box-shadow: 0 0 5px #cccccc;
+  box-shadow: 0 0 4px #1890FF;
 }
 .pages{
   text-align: left;
   padding: 35px;
+}
+.bottomLine{
+  position: fixed;
+  height: 5px;
+  background-color: #1890FF;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
 }
