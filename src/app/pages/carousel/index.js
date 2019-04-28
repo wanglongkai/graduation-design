@@ -93,6 +93,12 @@ export default class CarouselPage extends React.Component {
             <div>ReactNode</div>
             <div>'👍'</div>
           </li>
+          <li className={style.li}>
+            <div style={{color:'red'}}>注意事项</div>
+            <div>被轮播的图片必须ul>li格式包裹，且ul的className必须填写为“wlk-carsouel”</div>
+            <div>-</div>
+            <div>-</div>
+          </li>
         </ul>
       </div>
     )

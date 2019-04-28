@@ -4,7 +4,8 @@
  */
 
 import React from 'react';
-import {BrowserRouter,Route,Switch} from "react-router-dom";
+// import {BrowserRouter,Route,Switch} from "react-router-dom";
+import {HashRouter,Route,Switch} from "react-router-dom";
 import './App.css'
 import Nav from './components/nav'
 import Top from './components/top'
@@ -33,7 +34,7 @@ import Table from  './pages/table'
 export default class WlkGraduationAPP extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className='App'>
           <div className='nav'><Nav/></div>
           <div className='main'>
@@ -61,7 +62,7 @@ export default class WlkGraduationAPP extends React.Component {
           </div>
           <div className='bottomLine'> </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

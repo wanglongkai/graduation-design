@@ -5,7 +5,6 @@
 
 import React from 'react';
 import style from "../index.module.scss"
-import Btn from "../../../components/button"
 import Pagination from '../../../components/pagination'
 
 export default class PaginationPage extends React.Component {
@@ -38,7 +37,7 @@ export default class PaginationPage extends React.Component {
           <Pagination total={200} current={8} theme='red'/>
           <br/><br/>
           <Pagination total={200} current={8} theme='red' size='lg'/>
-          <br/><br/>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
           <Pagination total={200} current={8} theme='blue' long={5}/>
         </div>
 

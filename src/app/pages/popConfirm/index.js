@@ -35,11 +35,11 @@ export default class PopPage extends React.Component {
             <Btn>上</Btn>
           </PopConform>
 
-          <PopConform placement='bottom' theme='red'>
+          <PopConform placement='bottom' theme='red' title="你确定这么做吗？">
             <Btn>下</Btn>
           </PopConform>
 
-          <PopConform placement='left' theme='green'>
+          <PopConform placement='left' theme='green' title="请确认该操作！">
             <Btn>左</Btn>
           </PopConform>
 

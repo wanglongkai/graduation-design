@@ -16,19 +16,13 @@ export default class Panel extends React.Component {
     const {title, children, left, right,theme} = this.props
 
     return(<div className={css.panel}>
-
       <div className={css.head}>
-
         <div className={css.left}>
           <div className={css.title} style={{border: `1px solid ${theme}`,color: theme}}>{title}</div>
           {left}
         </div>
-
         <div className={css.right}>{right}</div>
-
       </div>
-
-
       <div className={css.body} style={{}}>{children}</div>
 
     </div>)

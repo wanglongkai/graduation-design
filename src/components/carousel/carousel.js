@@ -35,8 +35,8 @@ export default class Carousel extends React.Component {
         <div className="inner" style={{borderRadius:radius}}>
           {children}
           <ol className="bar" style={{display:olList ? null : 'none'}}> </ol>
-          {/*<div id="arr" style={{opacity: prevNext ? 1 : 0}}>*/}
-          <div id="arr">
+          <div id="arr" style={{opacity: prevNext ? 1 : 0}}>
+          {/*<div id="arr">*/}
             <span id="left" className='left'>{prevIcon}</span>
             <span id="right" className='right'>{nextIcon}</span>
           </div>
